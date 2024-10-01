@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.tipcalculatorapp.TipCalculatorController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <GridPane>
+        <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="amountTextField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label fx:id="tipPercentageLabel" text="15%" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Slider fx:id="tipPercentageSlider" min="0" max="100" value="15" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Tip" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="tipTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Total" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="totalTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+
+    <Button text="Calculate" onAction="#calculateButtonPressed" />
+
+</VBox>
